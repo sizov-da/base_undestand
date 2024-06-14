@@ -40,11 +40,11 @@ PWA и localstorage
             return (await dbPromise).getAllKeys('keyval')
             }
         }
-```
 
-let data = idbKeyval.get('key') // получение значения
-idbKeyval.set('key', '123') // сохранение значения
-idbKeywal.delete('key') // удаление значения
+        let data = idbKeyval.get('key') // получение значения
+        idbKeyval.set('key', '123') // сохранение значения
+        idbKeywal.delete('key') // удаление значения
+```
 Само расширение устанавливается простой командой
 
         npm install -s idb
