@@ -48,6 +48,7 @@ PWA и localstorage
 Само расширение устанавливается простой командой
 
         npm install -s idb
+
 В конечном итоге мы можем использовать idbKeyval как хранилище типа "Ключ-Значения" и полностью заменить себе, тем самым localstorage с поддержкой функциональности уже везде.
 
 P.S. Еще есть расширение https://www.npmjs.com/package/localforage которое из коробки реализует API Localstorage, используя под капотом WebSQL или IndexedDB
