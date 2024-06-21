@@ -16,9 +16,13 @@
 по факту можно отсюда подучить все и идти на собесы
 https://brave-interviews-frontend.notion.site/Frontend-33de609d7e8b4a6b8d7dc7f23070c28b?pvs=4
 
+База вопросов по фронтенду:
+ 1. [основы JavaScript](../questions_file/my_work_questions.md)
+
 
 Основы JavaScript
 1. [Реальный DOM](../questions_file/real_DOM.md)
+2. [Виртуальный DOM](../questions_file/virtual_DOM.md)
 2. [Виртуальный DOM](../questions_file/virtual_DOM.md)
 
 
