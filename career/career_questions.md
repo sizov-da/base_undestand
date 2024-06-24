@@ -18,12 +18,14 @@ https://brave-interviews-frontend.notion.site/Frontend-33de609d7e8b4a6b8d7dc7f23
 
 База вопросов по фронтенду:
  1. [основы JavaScript](questions_file/my_work_questions.md)
-
+ 2. [Ссылочный JavaScript Примитивы и Ссылки](questions_file/reference_programming_language.md)
+ 
 
 Основы JavaScript
+
 1. [Реальный DOM](questions_file/real_DOM.md)
 2. [Виртуальный DOM](questions_file/virtual_DOM.md)
-2. [Виртуальный DOM](questions_file/virtual_DOM.md)
+3. [Виртуальный DOM](questions_file/virtual_DOM.md)
 
 
 
