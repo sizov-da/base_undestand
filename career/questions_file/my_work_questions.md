@@ -1,6 +1,8 @@
 Отлично, начнем с основ JavaScript. Вот несколько ключевых вопросов и их ответы:
 
-[Ссылка на строку 48](my_work_questions.md#my_work_questions4)
+### Вопросы и ответы по JavaScript
+[career_questions](..%2Fcareer_questions.md)
+
 
 ### 1. Что такое [замыкания (closures)](my_work_questions/js_closers.md) и как они работают?
 
@@ -140,7 +142,7 @@ const arrowFunction = () => {
 arrowFunction();
 ```
 
-### 6. Объясните различия между методами `call`, `apply` и `bind`.
+### 6. Объясните [различия между методами `call`, `apply` и `bind`](my_work_questions%2Fcall_apply_bind.md).
 
 **Ответ:**
 - `call`: Вызывает функцию с указанным значением `this` и аргументами, переданными по отдельности.
@@ -163,7 +165,8 @@ const boundFunction = introduce.bind(person, 'Hey', '...');
 boundFunction(); // Выведет: Hey, my name is Bob...
 ```
 
-### 7. Что такое IIFE (Immediately Invoked Function Expression) и зачем она нужна?
+### 7. Что такое IIFE ([Immediately Invoked Function Expression](my_work_questions%2FImmediately_Invoked_Function_Expression.md)) и зачем она нужна? В чем отличие от стрелочной?
+
 
 **Ответ:**
 IIFE — это функция, которая вызывается сразу же после создания. Она используется для создания локальной области видимости и избегания загрязнения глобальной области видимости.
@@ -241,6 +244,7 @@ console.log('End');
 
 // Вывод: Start, End, Timeout
 ```
+
 
 ### 10. Объясните принцип работы [hoisting в JavaScript.](my_work_questions/hoisting_in_JavaScript.md)
 
