@@ -5,7 +5,7 @@
 
 
 
-Бигдата  
+Биг дата  architect
 ====================
  1. [big_data.md](big_data%2Fbig_data.md)
  2. [EDWH](https://digital.tn.ru/articles/sistemy-khraneniya-i-obrabotki-bolshikh-dannykh/)
