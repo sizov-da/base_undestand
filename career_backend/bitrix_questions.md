@@ -36,6 +36,7 @@ test diagrams
     classDiagram
         class Animal
         Vehicle <|-- Car
+        
 ```
 
 ```mermaid
