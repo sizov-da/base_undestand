@@ -57,6 +57,15 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 - https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/236471/
 - https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/236470/
 
+
+
+
+
+
+
+
+
+
 # Статус:
 
 ## Зонт
@@ -72,12 +81,13 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 - [Back] п. 8.2 Кредитование субъектов МСП г. Москва https://inside.notamedia.ru/company/personal/user/5711/tasks/task/view/230279/
 Загружена достаточно
 
- 
+ перекл https://inside.notamedia.ru/company/personal/user/4981/tasks/task/view/238318/
 
 # Игорь Стерин	@lws435a
 ### в работе
-- [Средний] В карточке профиля пользователя банка 403 ошибка
-  https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/231841/
+- [Доработка] [Низкий приоритет] Доступность просмотра/редактирования пользователей в зависимости от группы доступа.
+  https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/231684/
+- [Баг][Блокирующий] В модальном окне "Добавление проекта Кредитного договора" нет значений в выпадающем списке поля "№ Договора поручительства". https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/231381/
 
 ### на очереди
 - Выберем с Верой индивидуально
@@ -88,7 +98,7 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 ### в работе
 - [Epic] МЧД
   https://inside.notamedia.ru/company/personal/user/5691/tasks/task/view/237730/
-
+  Ориентировочно будет делать до четверга
 
 
 # Антон Синицин	@antonsinitsyntg
@@ -99,6 +109,7 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
     + 1 в выходные пробовал запустить обновление на тесте. 
     + 2 теперь смотрю если багов нет, запускаю на проде 
     + 3 отдаем прод тестироващикам чтобы актуализировать баги
+    + Ситуация продолжается по сей день 20 багов новых нет
 
   
 
@@ -109,22 +120,24 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 - https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/238261/
 
 ### на очереди
-- Запросил у Веры
+- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/238234/
 
 
 # Александр Земляной  @galamoon
 
-### в работе
+### отработано
 - https://inside.notamedia.ru/company/personal/user/6063/tasks/task/view/238247/
-- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/236452/
+- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/236452/ 
 
-Загружен до среды мониторю статус
+### в работе
+- https://inside.notamedia.ru/workgroups/group/6043/tasks/task/view/214458/
+
 
 
 
 ## Созонт
 
-# Александр Чуклин	@sempom
+# Александр Чуклин	@sempom (отпуск)
 ### Отработано
 - https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/238108/
 
@@ -142,14 +155,16 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 ### в работе
 - Виджеты. Back. Разработать.  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235854/
 
-
 ### на очереди
 
 
 
 # Александр Молдованов	@MoldovanovAlex
-### в работе
+### отработано
 - https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235743/ - 14 - 19.08.2024 - 20.08.2024
+
+
+### в работе
 - https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235744/ - 10 - 21.08.2024 - 22.08.2024
 
 ### на очереди
