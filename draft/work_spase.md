@@ -73,22 +73,23 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 
 ### в работе
 
-- [Баг][Критический] В результатах проверки субъектов МСП в поле "Проверка наличия запрещенных ОКВЭД у заемщика" результат проверки "Заемщик не относится к категории Микропредприятие"  https://inside.notamedia.ru/company/personal/user/5999/tasks/task/view/237989/
+- [БАГ][Значит.] Зонт. КМСП. Раздел "Задачи". Отсутствуют пользователи в выпадающем списке для назначения ответственного на задачу. https://inside.notamedia.ru/company/personal/user/6052/tasks/task/view/238318/
+- [Баг][Критический] В результатах проверки субъектов МСП в поле "Проверка наличия запрещенных ОКВЭД у заемщика" результат проверки "Заемщик не относится к категории Микропредприятие"  https://inside.notamedia.ru/company/personal/user/5999/tasks/task/view/237989/ есть блокер доступ в бд оракл (данные из бд дам я)
 
 ### на очереди
-- [БАГ][Значит.] Зонт. КМСП. Раздел "Задачи". Отсутствуют пользователи в выпадающем списке для назначения ответственного на задачу. https://inside.notamedia.ru/company/personal/user/6052/tasks/task/view/238318/
 - [Back] п. 6 Кредитование начинающих и молодых предпринимателей https://inside.notamedia.ru/company/personal/user/5711/tasks/task/view/229980/
 - [Back] п. 8.2 Кредитование субъектов МСП г. Москва https://inside.notamedia.ru/company/personal/user/5711/tasks/task/view/230279/
 Загружена достаточно
 
- перекл https://inside.notamedia.ru/company/personal/user/4981/tasks/task/view/238318/
-
+ 
 # Игорь Стерин	@lws435a
-### в работе
+### отработано
 - [Доработка] [Низкий приоритет] Доступность просмотра/редактирования пользователей в зависимости от группы доступа.
   https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/231684/
 - [Баг][Блокирующий] В модальном окне "Добавление проекта Кредитного договора" нет значений в выпадающем списке поля "№ Договора поручительства". https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/231381/
 
+### в работе
+- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/238565/
 ### на очереди
 - Выберем с Верой индивидуально
 
@@ -109,12 +110,15 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
     + 1 в выходные пробовал запустить обновление на тесте. 
     + 2 теперь смотрю если багов нет, запускаю на проде 
     + 3 отдаем прод тестироващикам чтобы актуализировать баги
-    + Ситуация продолжается по сей день 20 багов новых нет
+осталось 16 багов новых нет
 
   
 
 
 # Катя	@eskonyaeva
+
+### отработано
+- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/235527/
 
 ### в работе
 - https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/238261/
@@ -125,19 +129,18 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 
 # Александр Земляной  @galamoon
 
-### отработано
-- https://inside.notamedia.ru/company/personal/user/6063/tasks/task/view/238247/
-- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/236452/ 
 
 ### в работе
 - https://inside.notamedia.ru/workgroups/group/6043/tasks/task/view/214458/
-
+- 
+### на очереди 
+из списка планирую дать
 
 
 
 ## Созонт
 
-# Александр Чуклин	@sempom (отпуск)
+# Александр Чуклин	@sempom (в отпуске за него Сизов)
 ### Отработано
 - https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/238108/
 
@@ -172,7 +175,7 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 - https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235746/ - 10 - 26.08.2024 - 27.08.2024
 
 
-# Владислав Давыдов	@mylodon (в отпуске за него Сизов)
+# Владислав Давыдов	@mylodon (отпуск)
 
 ### в работе
 - Карточка запроса на лимиты РГО. Back. Разработать.  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235259/  
@@ -197,3 +200,4 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 ### на очереди
 - https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235707/ - 10 - 07.08.2024 - 08.08.2024
 
+дима заканчивает задачи 
