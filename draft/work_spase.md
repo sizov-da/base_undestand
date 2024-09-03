@@ -72,16 +72,15 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 # Татьяна Манущенко	@TanyaItgro
 
 ### в работе
-- [Back] п. 6 Кредитование начинающих и молодых предпринимателей https://inside.notamedia.ru/company/personal/user/5711/tasks/task/view/229980/
+- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/239093/ (там Сергей вчера писал мне, чтоб поменять текст ошибки + добавить проверку на уникальность). 
+- https://inside.notamedia.ru/company/personal/user/5999/tasks/task/view/239234/.
+- А дальше уже смотреть, что останется в таблице
 
-### на очереди
 
-- [Back] п. 8.2 Кредитование субъектов МСП г. Москва https://inside.notamedia.ru/company/personal/user/5711/tasks/task/view/230279/
-Загружена достаточно
 
  
 # Игорь Стерин	@lws435a
-### отработано
+### отработано (собираю)
 - [Доработка] [Низкий приоритет] Доступность просмотра/редактирования пользователей в зависимости от группы доступа.
   https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/231684/
 - [Баг][Блокирующий] В модальном окне "Добавление проекта Кредитного договора" нет значений в выпадающем списке поля "№ Договора поручительства". https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/231381/
@@ -89,40 +88,38 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 - https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237918/
 
 ### в работе
+- https://inside.notamedia.ru/company/personal/user/6021/tasks/task/view/238271/ (долго)
 
 
-- https://inside.notamedia.ru/company/personal/user/6021/tasks/task/view/238271/
-
-### на очереди
-- Выберем с Верой индивидуально
 
 
 # Сергей Ходоревский @SKhodorevsky
 
 ### в работе
 - [Epic] МЧД
-  https://inside.notamedia.ru/company/personal/user/5691/tasks/task/view/237730/
-    1. создана структура
-    2. реализована загрузка МЧД
-    3. реализован грид с МЧД + деталка МЧД (только на просмотр)
-    4. реализована проверка валидности МЧД на локальном и удаленных серверах (удаленный сервер не тестировался)
-    5. необходима аналитика по использованию МЧД (для бэка и фронта)
-    6. необходим импорт данных по руководителям организаций (для загрузки МЧД)
-    7. В дальнейшем будет необходимо доработать задачу под сдачу. В соответствии с аналитикой и требованиями заказчика
-       на тест в 17-30, что реально, но сомнительно
+- щас задача https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/238630/
+- сойка - тут нужно определиться чо делать
+- доработки по МЧД
+- модалка выбора МЧД
+- фоновые задачи
+- запрет изменения ХЛ
+  ну и че будет еще, там как раз Ковтун поднял вопрос правильности использования МЧД, скорее всего алгоритм использования будет меняться
 
 # Антон Синицин	@antonsinitsyntg
 
 ### в работе
-- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/238969/
-- Миграции-бой : проблемы и правка 
-    https://inside.notamedia.ru/company/personal/user/5993/tasks/task/view/237624/
- + 1 в юл и юл на дату забираем регион из кхд
- + 2 при импорте надо ставить пользователя, создавшего заявку/кд/лимиты и т.д., а не просто админа
- + 3 смена порядка запуска и более удобный запуск пачки миграций
- + 4 для импорта пользователей обновление полей, групп, подразделения
+Нужно парсить файлы для получения исторических данных
+- https://inside.notamedia.ru/company/personal/user/5440/tasks/task/view/239219/
 
-сейчас по этим 4 пунктам отладка и позже запуск на проде
+- https://inside.notamedia.ru/company/personal/user/5440/tasks/task/view/239220/
+
+1 в кд 1764 не отображаются авторы у большинства кд.
+надо их догрузить из аис.
+2 парсинг реестра для заявок зонт
+3 парсинг реестра для заявок 1764
+4 остатки по кредиту надо не только импортировать в таблицу mbc_balance_loan_debt, но потом еще надо по ним заполнять mbc_loan_balance_reporting_period
+5 баги миграций
+
 
 
   
@@ -131,34 +128,55 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 # Катя	@eskonyaeva
 
 ### в работе
-- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/238690/
-### на очереди
-- По согласованию либо из таблицы
+- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/239217/
+
 
 
 # Александр Земляной  @galamoon
 ### в работе
-- [Тест] Критические недостатки сверки реестра https://inside.notamedia.ru/company/personal/user/4502/tasks/task/view/238322/
-### на очереди 
-- [БАГ] [1764] Не отображается информация  https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/238535/
+
+- 1 - https://inside.notamedia.ru/company/personal/user/5390/tasks/task/view/238322/
+- 2 - https://inside.notamedia.ru/company/personal/user/5390/tasks/task/view/238492/
+- 3 - https://inside.notamedia.ru/company/personal/user/5390/tasks/task/view/238501/
 
 
 
 # Александр Молдованов	@MoldovanovAlex
-### отработано
+### отработано (созонт ждем проверку)
 - https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235743/ - 14 - 19.08.2024 - 20.08.2024
 
 
 ### в работе
 
 Таблица https://docs.google.com/spreadsheets/d/1ctM36QkYR6Nvr9dMAWgAYddZGQmLr0kKrQhc4G0iTDc/edit?gid=0#gid=0
-- сейчас в Заявке 1764 добавить возможность заменять сформированные файлы на приложенные пользаками, с поддержкой пдф
+- Делает по порядку, сейчас это - Исключить ситуацию при которой пользователь по прямой ссылке получает доступ к данным другого банка.
+- (Не приоритет в сравнении с таблицей но на Саше) В ПКД по 1764 в поле с приоритетной отраслью добавить пустое значение https://inside.notamedia.ru/company/personal/user/5440/tasks/task/view/236458/
 
 
-### на очереди
+
+### на очереди (созонт)
 - https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235744/ - 10 - 21.08.2024 - 22.08.2024
 - https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235745/ - 6 - 23.08.2024 - 23.08.2024
 - https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235746/ - 10 - 26.08.2024 - 27.08.2024
+
+
+
+
+# Владислав Давыдов	@mylodon
+
+### в работе
+
+- Зонт https://inside.notamedia.ru/company/personal/user/5440/tasks/task/view/239233/
+
+### на очереди (Созонт Сизов)
+- Карточка запроса на лимиты РГО. Back. Разработать.  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235259/  
+  В очереди
+
+- Интерфейс раздела "Задачи". Back.  Задачи о лимитах. Разработать.  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235590/  
+  БАГИ
+
+- Реестр лимитов РГО. Back. Разработать.  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235634/  
+  БАГИ
 
 
 
@@ -177,30 +195,20 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 
 # Равиль Хабихужин	@RavHub
 ### в работе
-- https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235854/
 
-### на очереди
+- 1 Проверка общей допустимой доли ответственности Совместного поручительства  Разработать  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/238821/
+- 2 Проверка допустимого срока кредитования  Разработать  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/238823/
+- 3 Расчет общего свободного остатка лимита по Договору поручительства  Разработать  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/238824/
 
 
-# Владислав Давыдов	@mylodon (отпуск)
-
-### в работе
-- Карточка запроса на лимиты РГО. Back. Разработать.  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235259/  
-  В очереди
-
-- Интерфейс раздела "Задачи". Back.  Задачи о лимитах. Разработать.  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235590/  
-  БАГИ
-
-- Реестр лимитов РГО. Back. Разработать.  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235634/  
-  БАГИ
 
 
 # Дима Скуднов	@dmsk73
 ### отработано
 - https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235706/ - мелкие доработки
 - https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235694/ - мелкие доработки
+
 ### в работе
-- В чате кидают баги, сейчас не на зонте , пока пытаюсь фиксит баги на дп созонта
 - Дополнительное соглашение к ДП. Back. Таб со списком РГО + Лимиты РГО. Разработать.  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235727/ (До среды)
 
 ### на очереди
