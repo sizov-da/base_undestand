@@ -72,11 +72,11 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 # Татьяна Манущенко	@TanyaItgro
 
 ### в работе
-- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/239093/ (там Сергей вчера писал мне, чтоб поменять текст ошибки + добавить проверку на уникальность). 
-- https://inside.notamedia.ru/company/personal/user/5999/tasks/task/view/239234/.
+- https://inside.notamedia.ru/company/personal/user/5999/tasks/task/view/238492/ 
+- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/238234/ .
 - А дальше уже смотреть, что останется в таблице
 
-
+ 
 
  
 # Игорь Стерин	@lws435a
@@ -109,16 +109,10 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 
 ### в работе
 Нужно парсить файлы для получения исторических данных
-- https://inside.notamedia.ru/company/personal/user/5440/tasks/task/view/239219/
-
+- https://inside.notamedia.ru/company/personal/user/5440/tasks/task/view/239219/  парсинг файлов реестра зонта, пришедших из аис
 - https://inside.notamedia.ru/company/personal/user/5440/tasks/task/view/239220/
 
-1 в кд 1764 не отображаются авторы у большинства кд.
-надо их догрузить из аис.
-2 парсинг реестра для заявок зонт
-3 парсинг реестра для заявок 1764
-4 остатки по кредиту надо не только импортировать в таблицу mbc_balance_loan_debt, но потом еще надо по ним заполнять mbc_loan_balance_reporting_period
-5 баги миграций
+
 
 
 
@@ -128,16 +122,18 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 # Катя	@eskonyaeva
 
 ### в работе
-- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/239217/
+- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/238661/
+- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/238686/
+- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/238690/
 
 
 
 # Александр Земляной  @galamoon
 ### в работе
 
-- 1 - https://inside.notamedia.ru/company/personal/user/5390/tasks/task/view/238322/
-- 2 - https://inside.notamedia.ru/company/personal/user/5390/tasks/task/view/238492/
 - 3 - https://inside.notamedia.ru/company/personal/user/5390/tasks/task/view/238501/
+- https://inside.notamedia.ru/company/personal/user/6063/tasks/task/view/239466/
+- https://inside.notamedia.ru/company/personal/user/5440/tasks/task/view/239239/
 
 
 
@@ -149,7 +145,9 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 ### в работе
 
 Таблица https://docs.google.com/spreadsheets/d/1ctM36QkYR6Nvr9dMAWgAYddZGQmLr0kKrQhc4G0iTDc/edit?gid=0#gid=0
-- Делает по порядку, сейчас это - Исключить ситуацию при которой пользователь по прямой ссылке получает доступ к данным другого банка.
+- Делает по порядку,
+- https://inside.notamedia.ru/company/personal/user/5440/tasks/task/view/239224/
+- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/236189/
 - (Не приоритет в сравнении с таблицей но на Саше) В ПКД по 1764 в поле с приоритетной отраслью добавить пустое значение https://inside.notamedia.ru/company/personal/user/5440/tasks/task/view/236458/
 
 
@@ -166,15 +164,12 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 
 ### в работе
 
-- Зонт https://inside.notamedia.ru/company/personal/user/5440/tasks/task/view/239233/
+- Зонт https://inside.notamedia.ru/company/personal/user/3644/tasks/task/view/239216/ пункт 9
 
 ### на очереди (Созонт Сизов)
-- Карточка запроса на лимиты РГО. Back. Разработать.  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235259/  
-  В очереди
 
 - Интерфейс раздела "Задачи". Back.  Задачи о лимитах. Разработать.  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235590/  
   БАГИ
-
 - Реестр лимитов РГО. Back. Разработать.  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235634/  
   БАГИ
 
@@ -194,8 +189,12 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 
 
 # Равиль Хабихужин	@RavHub
-### в работе
 
+### в работе
+баги
+- https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235854/
+- https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235771/
+задачи
 - 1 Проверка общей допустимой доли ответственности Совместного поручительства  Разработать  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/238821/
 - 2 Проверка допустимого срока кредитования  Разработать  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/238823/
 - 3 Расчет общего свободного остатка лимита по Договору поручительства  Разработать  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/238824/
@@ -208,7 +207,7 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 - https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235706/ - мелкие доработки
 - https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235694/ - мелкие доработки
 
-### в работе
+### в работе 
 - Дополнительное соглашение к ДП. Back. Таб со списком РГО + Лимиты РГО. Разработать.  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235727/ (До среды)
 
 ### на очереди
