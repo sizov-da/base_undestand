@@ -72,69 +72,38 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 # Татьяна Манущенко	@TanyaItgro
 
 ### в работе
-- https://inside.notamedia.ru/company/personal/user/5999/tasks/task/view/238492/ 
-- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/238234/ .
-- А дальше уже смотреть, что останется в таблице
-
- 
-
- 
-# Игорь Стерин	@lws435a
-### отработано (собираю)
-- [Доработка] [Низкий приоритет] Доступность просмотра/редактирования пользователей в зависимости от группы доступа.
-  https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/231684/
-- [Баг][Блокирующий] В модальном окне "Добавление проекта Кредитного договора" нет значений в выпадающем списке поля "№ Договора поручительства". https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/231381/
-- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/238565/
-- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237918/
-
-### в работе
-- https://inside.notamedia.ru/company/personal/user/6021/tasks/task/view/238271/ (долго)
-
+- https://inside.notamedia.ru/company/personal/user/5999/tasks/task/view/239512/ 
+- https://inside.notamedia.ru/company/personal/user/5999/tasks/task/view/239297/
 
 
 
 # Сергей Ходоревский @SKhodorevsky
 
 ### в работе
-- [Epic] МЧД
-- щас задача https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/238630/
-- сойка - тут нужно определиться чо делать
-- доработки по МЧД
-- модалка выбора МЧД
-- фоновые задачи
-- запрет изменения ХЛ
-  ну и че будет еще, там как раз Ковтун поднял вопрос правильности использования МЧД, скорее всего алгоритм использования будет меняться
+https://docs.google.com/spreadsheets/d/1PdvlojF7F_nbyeat222P3-pMjzpbIh4B/edit?gid=109157753#gid=109157753
+раздел срд сойка
+
 
 # Антон Синицин	@antonsinitsyntg
-
 ### в работе
 Нужно парсить файлы для получения исторических данных
-- https://inside.notamedia.ru/company/personal/user/5440/tasks/task/view/239219/  парсинг файлов реестра зонта, пришедших из аис
-- https://inside.notamedia.ru/company/personal/user/5440/tasks/task/view/239220/
-
-
-
-
-
-  
+- https://inside.notamedia.ru/company/personal/user/5440/tasks/task/view/237624/ вылезла куча багов по файлам из аис
+  уже 9 чек листов Задача постоянно растёт
 
 
 # Катя	@eskonyaeva
 
 ### в работе
-- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/238661/
-- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/238686/
-- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/238690/
+- 4ч - https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/238686/ как будто дублируются кд из листа проверки оквэд в другой лист там о проверке даты кд и дп
+
 
 
 
 # Александр Земляной  @galamoon
 ### в работе
 
-- 3 - https://inside.notamedia.ru/company/personal/user/5390/tasks/task/view/238501/
-- https://inside.notamedia.ru/company/personal/user/6063/tasks/task/view/239466/
-- https://inside.notamedia.ru/company/personal/user/5440/tasks/task/view/239239/
-
+- 1 https://inside.notamedia.ru/company/personal/user/6063/tasks/task/view/239466/  Разбираюсь с бек таской формирования реестра
+- 2 https://inside.notamedia.ru/company/personal/user/5440/tasks/task/view/239239/
 
 
 # Александр Молдованов	@MoldovanovAlex
@@ -146,8 +115,7 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 
 Таблица https://docs.google.com/spreadsheets/d/1ctM36QkYR6Nvr9dMAWgAYddZGQmLr0kKrQhc4G0iTDc/edit?gid=0#gid=0
 - Делает по порядку,
-- https://inside.notamedia.ru/company/personal/user/5440/tasks/task/view/239224/
-- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/236189/
+- https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/239583/ - пока это, далее что то по списку
 - (Не приоритет в сравнении с таблицей но на Саше) В ПКД по 1764 в поле с приоритетной отраслью добавить пустое значение https://inside.notamedia.ru/company/personal/user/5440/tasks/task/view/236458/
 
 
@@ -164,13 +132,13 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 
 ### в работе
 
-- Зонт https://inside.notamedia.ru/company/personal/user/3644/tasks/task/view/239216/ пункт 9
+- Зонт https://inside.notamedia.ru/company/personal/user/5354/tasks/task/view/239250/
 
 ### на очереди (Созонт Сизов)
 
-- Интерфейс раздела "Задачи". Back.  Задачи о лимитах. Разработать.  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235590/  
+- комменты  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235590/  
   БАГИ
-- Реестр лимитов РГО. Back. Разработать.  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235634/  
+- не смотрел.  https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235634/  
   БАГИ
 
 
@@ -212,4 +180,4 @@ https://inside.notamedia.ru/workgroups/group/5411/tasks/task/view/237638/
 
 ### на очереди
 - Интерфейс раздела "Задачи". Back. Подписание ДС к ДП. Разработать. https://inside.notamedia.ru/workgroups/group/6490/tasks/task/view/235730/  (не смотрел даже) - 10 - 07.08.2024 - 08.08.2024
-
+Дима не на созонте
