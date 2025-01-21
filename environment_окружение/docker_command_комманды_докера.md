@@ -44,7 +44,7 @@ docker delete all containers, images, volumes, networks, and cache
             docker rm $(docker ps -a -q) && docker rmi $(docker images -q) && docker volume rm $(docker volume ls -q) && docker network rm $(docker network ls -q) && docker system prune -a
 docker delete all containers, images, volumes, networks, and cache, and stop all containers
     
-                docker rm $(docker ps -a -q) && docker rmi $(docker images -q) && docker volume rm $(docker volume ls -q) && docker network rm $(docker network ls -q) && docker system prune -a && docker stop $(docker ps -q)
+               docker stop $(docker ps -q) && docker rm $(docker ps -a -q) && docker rmi $(docker images -q) && docker volume rm $(docker volume ls -q) && docker network rm $(docker network ls -q) && docker system prune -a
 docker delete all containers, images, volumes, networks, and cache, and stop all containers, and remove all stopped containers
     
-                docker rm $(docker ps -a -q) && docker rmi $(docker images -q) && docker volume rm $(docker volume ls -q) && docker network rm $(docker network ls -q) && docker system prune -a && docker stop $(docker ps -q) && docker rm $(docker ps -a -q)
+                docker rm $(docker ps -a -q) && docker rmi $(docker images -q) && docker volume rm $(docker volume ls -q) && docker network rm $(docker network ls -q) && docker system prune -a && docker stop $(docker ps -q) 
