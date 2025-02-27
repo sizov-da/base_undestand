@@ -1,0 +1,806 @@
+openapi: 3.0.0
+info:
+  title: Сервисы управления проектами (ПОДРЯДЧИКИ)
+  description: API для управления проектами, этапами, пользователями, файлами и уведомлениями.
+  version: 1.1.0
+servers:
+  - url: https://api.example.com
+    description: Production Server
+  - url: https://stage-api.example.com
+    description: Staging Server
+  - url: http://localhost:8000
+    description: Local Development
+
+paths:
+  /api/auth/login:
+    post:
+      summary: Вход пользователя
+      operationId: loginUser
+      tags:
+        - AuthService
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+            example:
+              email: "user@example.com"
+              password: "mypassword"
+      responses:
+        "200":
+          description: Успешный вход
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+              example:
+                token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+        "401":
+          description: Ошибка авторизации
+
+  /api/auth/register:
+    post:
+      summary: Регистрация нового пользователя
+      operationId: registerUser
+      tags:
+        - AuthService
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+      responses:
+        "201":
+          description: Пользователь зарегистрирован
+        "400":
+          description: Ошибка регистрации
+
+
+  ### ПРОЕКТЫ ###
+  /api/projects:
+    get:
+      summary: Получить список проектов
+      operationId: getProjects
+      tags:
+        - ProjectService
+      security:
+        - BearerAuth: []
+      responses:
+        "200":
+          description: Список проектов
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Project"
+    post:
+      summary: Создать новый проект
+      operationId: createProject
+      tags:
+        - ProjectService
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Project"
+      responses:
+        "201":
+          description: Проект создан
+
+  /api/projects/{id}:
+    get:
+      summary: Получить проект по ID
+      operationId: getProjectById
+      tags:
+        - ProjectService
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      security:
+        - BearerAuth: [ ]
+      responses:
+        "200":
+          description: Детали проекта
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Project"
+    put:
+      summary: Обновить проект
+      operationId: updateProject
+      tags:
+        - ProjectService
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      security:
+        - BearerAuth: [ ]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Project"
+      responses:
+        "200":
+          description: Проект обновлен
+    delete:
+      summary: Удалить проект
+      operationId: deleteProject
+      tags:
+        - ProjectService
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      security:
+        - BearerAuth: [ ]
+      responses:
+        "204":
+          description: Проект удален
+
+  ### ЭТАПЫ ###
+  /api/stages:
+    get:
+      summary: Получить список этапов
+      operationId: getStages
+      tags:
+        - StageService
+      security:
+        - BearerAuth: []
+      responses:
+        "200":
+          description: Список этапов
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Stage"
+
+    post:
+      summary: Создать новый этап
+      operationId: createStage
+      tags:
+        - StageService
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Stage"
+      responses:
+        "201":
+          description: Этап создан
+
+  /api/stages/{id}:
+    get:
+      summary: Получить этап по ID
+      operationId: getStageById
+      tags:
+        - StageService
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      security:
+        - BearerAuth: []
+      responses:
+        "200":
+          description: Детали этапа
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Stage"
+  ### ФАЙЛЫ ###
+  /api/files:
+    post:
+      summary: Загрузить файл
+      operationId: uploadFile
+      tags:
+        - FileService
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        "201":
+          description: Файл загружен
+  /api/files/{id}:
+    get:
+      summary: Получить файл по ID
+      operationId: getFileById
+      tags:
+        - FileService
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      security:
+        - BearerAuth: []
+      responses:
+        "200":
+          description: Файл найден
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+  ### УВЕДОМЛЕНИЯ ###
+  /api/notifications:
+    get:
+      summary: Получить список уведомлений
+      operationId: getNotifications
+      tags:
+        - NotificationService
+      security:
+        - BearerAuth: []
+      responses:
+        "200":
+          description: Список уведомлений
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Notification"
+
+
+  ### ВЕРТИКАЛИ ###
+  /api/verticals:
+    get:
+      summary: Получить список всех вертикалей
+      tags:
+        - Verticals
+      responses:
+        "200":
+          description: Успешный ответ, список вертикалей
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Vertical"
+
+    post:
+      summary: Создать новую вертикаль
+      tags:
+        - Verticals
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/VerticalCreate"
+      responses:
+        "201":
+          description: Вертикаль создана
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Vertical"
+
+  /api/verticals/{verticalId}:
+    get:
+      summary: Получить информацию о вертикали
+      tags:
+        - Verticals
+      parameters:
+        - name: verticalId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Информация о вертикали
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Vertical"
+
+    put:
+      summary: Обновить данные вертикали
+      tags:
+        - Verticals
+      parameters:
+        - name: verticalId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/VerticalUpdate"
+      responses:
+        "200":
+          description: Вертикаль обновлена
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Vertical"
+
+    delete:
+      summary: Удалить вертикаль
+      tags:
+        - Verticals
+      parameters:
+        - name: verticalId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: Вертикаль удалена
+  ### СЕКЦИИ ###
+  /api/users/{userId}/sections:
+    get:
+      summary: Получить список всех секций пользователя
+      tags:
+        - Sections
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Успешный ответ, список секций пользователя
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Section"
+
+
+  /api/users/{userId}/sections/{sectionId}:
+    get:
+      summary: Получить информацию о секции пользователя
+      tags:
+        - Sections
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: sectionId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Информация о секции
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Section"
+
+    put:
+      summary: Обновить данные в секции пользователя
+      tags:
+        - Sections
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: sectionId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SectionUpdate"
+      responses:
+        "200":
+          description: Секция обновлена
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Section"
+
+    delete:
+      summary: Удалить секцию пользователя
+      tags:
+        - Sections
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: sectionId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: Секция удалена
+
+  ### БЛОКИ ###
+  /api/users/{userId}/sections/{sectionId}/blocks:
+    get:
+      summary: Получить список блоков в секции пользователя
+      tags:
+        - Blocks
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: sectionId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Успешный ответ, список блоков
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Block"
+
+
+  /api/users/{userId}/blocks/{blockId}:
+    get:
+      summary: Получить информацию о блоке пользователя
+      tags:
+        - Blocks
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: blockId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Информация о блоке
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Block"
+
+    put:
+      summary: Обновить данные блока пользователя
+      tags:
+        - Blocks
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: blockId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BlockUpdate"
+      responses:
+        "200":
+          description: Блок обновлен
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Block"
+
+    delete:
+      summary: Удалить блок пользователя
+      tags:
+        - Blocks
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: blockId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: Блок удален
+
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    Project:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+      example:
+        id: "123"
+        name: "Новый проект"
+        description: "Описание проекта"
+
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+      example:
+        id: "456"
+        name: "Иван Иванов"
+        email: "ivan@example.com"
+
+    Stage:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        status:
+          type: string
+      example:
+        id: "stg123"
+        name: "Этап 1"
+        status: "В работе"
+
+    File:
+      type: object
+      properties:
+        id:
+          type: string
+        filename:
+          type: string
+        url:
+          type: string
+      example:
+        id: "file123"
+        filename: "document.pdf"
+        url: "https://api.example.com/files/document.pdf"
+
+    Notification:
+      type: object
+      properties:
+        id:
+          type: string
+        message:
+          type: string
+        read:
+          type: boolean
+      example:
+        id: "notif123"
+        message: "У вас новое уведомление"
+        read: false
+
+    Vertical:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: "550e8400-e29b-41d4-a716-446655440000"
+        name:
+          type: string
+          example: "Аудио книга"
+        description:
+          type: string
+          example: "Вертикаль для проектов по разработке Аудио книг"
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+
+    VerticalCreate:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          example: "Финансовые технологии"
+        description:
+          type: string
+          example: "Вертикаль для проектов в сфере финансовых технологий"
+
+    VerticalUpdate:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Финансовые технологии"
+        description:
+          type: string
+          example: "Обновленное описание вертикали"
+
+
+    Section:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: "550e8400-e29b-41d4-a716-446655440000"
+        name:
+          type: string
+          example: "Основная информация"
+        description:
+          type: string
+          example: "Раздел с основной информацией"
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+
+    SectionCreate:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          example: "Финансовые отчеты"
+        description:
+          type: string
+          example: "Секция с отчетами по финансам"
+
+    SectionUpdate:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Обновленная секция"
+        description:
+          type: string
+          example: "Обновленное описание секции"
+
+    Block:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: "650e8400-e29b-41d4-a716-446655440000"
+        sectionId:
+          type: string
+          format: uuid
+          example: "550e8400-e29b-41d4-a716-446655440000"
+        name:
+          type: string
+          example: "Таблица данных"
+        type:
+          type: string
+          enum: [text, table, chart, file]
+          example: "table"
+        content:
+          type: string
+          example: "JSON с данными таблицы"
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+
+    BlockCreate:
+      type: object
+      required:
+        - sectionId
+        - name
+        - type
+      properties:
+        sectionId:
+          type: string
+          format: uuid
+          example: "550e8400-e29b-41d4-a716-446655440000"
+        name:
+          type: string
+          example: "График продаж"
+        type:
+          type: string
+          enum: [text, table, chart, file]
+          example: "chart"
+        content:
+          type: string
+          example: "JSON с данными графика"
+
+    BlockUpdate:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "Обновленный блок"
+        type:
+          type: string
+          enum: [text, table, chart, file]
+          example: "table"
+        content:
+          type: string
+          example: "Обновленные данные блока"

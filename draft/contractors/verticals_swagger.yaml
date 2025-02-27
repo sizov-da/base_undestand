@@ -1,0 +1,105 @@
+openapi: 3.0.0
+info:
+  title: Vertical Management API
+  version: 1.0.0
+  description: API для управления вертикалями в системе
+servers:
+  - url: http://localhost:8000/api
+
+paths:
+  /verticals:
+    get:
+      summary: Получить список всех вертикалей
+      tags:
+        - Verticals
+      responses:
+        '200':
+          description: Успешный ответ
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Vertical'
+    post:
+      summary: Создать новую вертикаль
+      tags:
+        - Verticals
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Vertical'
+      responses:
+        '201':
+          description: Вертикаль успешно создана
+  
+  /verticals/{id}:
+    get:
+      summary: Получить информацию о конкретной вертикали
+      tags:
+        - Verticals
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Успешный ответ
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vertical'
+    put:
+      summary: Обновить информацию о вертикали
+      tags:
+        - Verticals
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Vertical'
+      responses:
+        '200':
+          description: Вертикаль успешно обновлена
+    delete:
+      summary: Удалить вертикаль
+      tags:
+        - Verticals
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Вертикаль успешно удалена
+
+components:
+  schemas:
+    Vertical:
+      type: object
+      required:
+        - name
+        - description
+      properties:
+        id:
+          type: string
+          example: "1"
+        name:
+          type: string
+          example: "Разработка ПО"
+        description:
+          type: string
+          example: "Разработка веб-приложений, мобильных приложений и API"
