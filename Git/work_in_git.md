@@ -1,3 +1,26 @@
+
+
+Чтобы сохранить все локальные изменения (staged + unstaged) в файл `mychanges.patch`, выполните:
+
+```bash
+git diff HEAD > mychanges.patch
+```
+
+Чтобы включить только проиндексированные изменения (staged):
+
+```bash
+git diff --cached > mychanges.patch
+```
+
+Чтобы получить патчи по свежим коммитам (например, последние 3):
+
+```bash
+git format-patch -3
+```
+
+
+
+
 ### update to local repo
 
         git stash

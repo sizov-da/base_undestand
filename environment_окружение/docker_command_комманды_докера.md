@@ -19,6 +19,25 @@
 connection to localhost in local machine
 
 
+REBUILD DOCKER CONTAINER
+```sh 
+docker-compose up -d --force-recreate eth-node
+```
+# Команды Docker для управления контейнерами и образами
+```sh 
+docker-compose stop tron-node && docker-compose rm -f tron-node && docker-compose up -d tron-node
+```
+ноды
+```shell
+ docker-compose logs -f --tail=30 tron-node
+```
+
+
+
+удалить контейнеры и образы
+```shell
+docker-compose down beacon-node
+```
 
 # Автоматическая очистка кеша Docker и освобождение места
 
@@ -77,8 +96,9 @@ docker delete all containers, images, volumes, networks, and cache
 
             docker rm $(docker ps -a -q) && docker rmi $(docker images -q) && docker volume rm $(docker volume ls -q) && docker network rm $(docker network ls -q) && docker system prune -a
 docker delete all containers, images, volumes, networks, and cache, and stop all containers
-    
+```sh
                docker stop $(docker ps -q) && docker rm $(docker ps -a -q) && docker rmi $(docker images -q) && docker volume rm $(docker volume ls -q) && docker network rm $(docker network ls -q) && docker system prune -a
+```
 docker delete all containers, images, volumes, networks, and cache, and stop all containers, and remove all stopped containers
     
                 docker rm $(docker ps -a -q) && docker rmi $(docker images -q) && docker volume rm $(docker volume ls -q) && docker network rm $(docker network ls -q) && docker system prune -a && docker stop $(docker ps -q) 
